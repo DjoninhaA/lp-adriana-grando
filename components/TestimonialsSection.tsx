@@ -1,60 +1,57 @@
-const testimonials = [
+const faqs = [
   {
-    name: "C. e R.",
-    text: "A terapia com a Adriana foi um divisor de águas no nosso relacionamento. Aprendemos a nos ouvir de verdade e a resolver conflitos sem machucar um ao outro. Recomendamos muito!",
-    stars: 5,
+    question: "A psicoterapia de casal é apenas para casais em crise?",
+    answer:
+      "Não. Muitos casais procuram atendimento quando percebem conflitos repetitivos, dificuldade de comunicação, afastamento emocional ou decisões importantes sobre o futuro da relação. O processo também pode ser um espaço de cuidado e prevenção.",
   },
   {
-    name: "M. e L.",
-    text: "Chegamos no limite, achando que ia terminar. A Adriana nos ajudou a entender o que estava acontecendo de verdade e hoje estamos mais unidos do que nunca. Gratidão enorme!",
-    stars: 5,
+    question: "A psicóloga vai dizer quem está certo ou errado?",
+    answer:
+      "Não. A psicoterapia de casal não tem como objetivo eleger culpados. O trabalho clínico busca compreender a dinâmica da relação, os padrões que se repetem e a forma como cada pessoa participa desses ciclos.",
   },
   {
-    name: "F. e J.",
-    text: "O atendimento online funcionou perfeitamente. A Adriana cria um ambiente tão acolhedor que a gente esquece que está em casa. Profissional incrível e muito humana.",
-    stars: 5,
+    question: "O atendimento serve para evitar uma separação?",
+    answer:
+      "A psicoterapia de casal não promete manter ou encerrar uma relação. O processo oferece um espaço profissional para que o casal compreenda melhor o que está vivendo e possa tomar decisões com mais clareza e responsabilidade.",
   },
   {
-    name: "J. e P.",
-    text: "Estávamos passando por um momento muito difícil depois de uma traição. A Adriana nos conduziu com muita delicadeza. Conseguimos reconstruir nossa relação com mais maturidade.",
-    stars: 5,
+    question: "Os dois precisam querer participar?",
+    answer:
+      "A participação de ambos é importante para o processo de casal. Quando apenas uma pessoa procura atendimento, pode ser avaliada a possibilidade de psicoterapia individual para trabalhar questões relacionadas à vivência afetiva e relacional.",
+  },
+  {
+    question: "Como funciona a primeira sessão?",
+    answer:
+      "A primeira sessão é um momento inicial de escuta, compreensão da demanda e explicação sobre o funcionamento do processo. É também uma oportunidade para que o casal tire dúvidas sobre o formato do atendimento.",
   },
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="py-24 px-6 bg-blush">
-      <div className="max-w-5xl mx-auto">
+    <section id="depoimentos" className="py-24 px-6 bg-blush-dark">
+      <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="section-badge mb-5 block mx-auto w-fit">
-            Depoimentos
-          </span>
           <h2
             className="text-4xl md:text-5xl font-semibold text-dark"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            O que dizem os casais
+            O que vocês podem esperar do processo
           </h2>
           <div className="mt-4 w-12 h-0.5 bg-primary mx-auto" />
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-white rounded-2xl p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              <div className="flex gap-1">
-                {Array.from({ length: t.stars }).map((_, i) => (
-                  <span key={i} className="text-amber-400 text-base">★</span>
-                ))}
-              </div>
-              <p className="text-dark/80 text-sm leading-relaxed italic">
-                &ldquo;{t.text}&rdquo;
+        {/* Q&A */}
+        <div className="flex flex-col gap-8">
+          {faqs.map((item) => (
+            <div key={item.question} className="bg-white rounded-2xl p-7 shadow-sm">
+              <p
+                className="text-dark font-semibold text-base mb-3"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                {item.question}
               </p>
-              <p className="text-primary text-sm font-semibold">— {t.name}</p>
+              <p className="text-dark/70 text-sm leading-relaxed">{item.answer}</p>
             </div>
           ))}
         </div>
