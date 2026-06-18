@@ -35,8 +35,9 @@ export default function HeroAboutSection() {
 
       {/* Texto — à esquerda, sobre o fundo */}
       <div className="relative z-10 pl-8 pr-6 sm:pl-16 lg:pl-32 xl:pl-48 pt-24 pb-12 lg:py-0 max-w-2xl lg:max-w-3xl">
-        <p className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-white/70 mb-5 font-medium">
-          Análise do Comportamento · FAP · Terapia Feminista
+        <p className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-white/70 mb-2 font-medium leading-relaxed">
+          Psicoterapia de Casal em Toledo-PR<br />
+          Atendimento presencial e online com Adriana Grando, Psicóloga CRP-PR 08/46974
         </p>
 
         <h1
@@ -49,7 +50,6 @@ export default function HeroAboutSection() {
 
         <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6">
           Eu posso te ajudar a compreender como a sua vem sendo construída.
-          Atendimento <strong className="text-white">online e presencial</strong> em Toledo – PR.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-8">
